@@ -2,6 +2,7 @@
 
 import streamlit as st
 
+st.set_page_config(page_title="用药辅助决策工具"，layout="wide")
 page1 = st.Page("pages/1_Antibio.py", title="抗菌药物")
 page2 = st.Page("pages/2_PPI.py", title="PPI")
 page3 = st.Page("pages/3_Albumin.py", title="人血白蛋白")
