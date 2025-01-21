@@ -15,7 +15,7 @@ st.title("QTc计算器")
 st.write("注意：当心率小于100时，将使用 Bazett 公式；当心率大于等于100时，将使用 Fridericia 公式。")
 
 # 输入QT间期
-qt_interval = st.number_input("输入QT间期（秒）：", min_value=0.0, value=0.4)
+qt_interval = st.number_input("输入QT间期（秒）：", min_value=0.0, value=400)
 if qt_interval <= 0:
     st.error("QT间期必须大于0")
     st.stop()
