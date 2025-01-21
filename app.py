@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-st.set_page_config(page_title="药物辅助决策工具", layout="wide")
+st.set_page_config(page_title="药物辅助决策工具",initial_sidebar_state="expanded")
 
 page1 = st.Page("pages/1_Antibio.py", title="抗菌药物")
 page2 = st.Page("pages/2_PPI.py", title="PPI")
