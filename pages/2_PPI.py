@@ -17,6 +17,7 @@ def display_treatment_advice():
     st.write("适应症参考下图")
     st.image("images/ppis/治疗性使用.png")
     
+st.header("PPI使用")    
 option = st.radio("PPI使用场景", ["预防使用", "治疗使用"])
 
 if option == "预防使用":

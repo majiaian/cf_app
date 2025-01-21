@@ -11,6 +11,8 @@ def display_hypovolemia_advice():
     st.write("决策图如下图")
     st.image("images/白蛋白/血容量不足.png")
     
+st.header("人血白蛋白使用")
+    
 option = st.radio("白蛋白使用场景", ["肝硬化使用", "血容量不足使用"])
 
 if option == "肝硬化使用":
