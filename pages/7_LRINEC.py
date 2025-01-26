@@ -3,38 +3,38 @@ import streamlit as st
 def calculate_lrinec_score(crp, wbc, hemoglobin, sodium, creatinine, glucose):
     score = 0
 
-    if crp == ">=150":
+    if crp == "大于等于150":
         score += 4
-    elif crp == "<150":
+    elif crp == "小于150":
         score += 0
 
-    if wbc == "<15":
+    if wbc == "小于15":
         score += 0
     elif wbc == "15-25":
         score += 1
-    elif wbc == ">25":
+    elif wbc == "大于25":
         score += 2
 
-    if hemoglobin == ">13.5":
+    if hemoglobin == "大于13.5":
         score += 0
     elif hemoglobin == "11.0-13.5":
         score += 1
-    elif hemoglobin == "<11":
+    elif hemoglobin == "小于11":
         score += 2
 
-    if sodium == ">=135":
+    if sodium == "大于等于135":
         score += 0
-    elif sodium == "<135":
+    elif sodium == "小于135":
         score += 2
 
-    if creatinine == "<=141":
+    if creatinine == "小于等于141":
         score += 0
-    elif creatinine == ">141":
+    elif creatinine == "大于141":
         score += 2
 
-    if glucose == "<=10":
+    if glucose == "小于等于10":
         score += 0
-    elif glucose == ">10":
+    elif glucose == "大于10":
         score += 1
 
     return score
@@ -44,12 +44,12 @@ st.title("坏死性筋膜炎 LRINEC 评分")
 st.write("请选择以下实验室指标的范围以计算 LRINEC 评分：")
 
 # 选择框
-crp = st.radio("CRP (mg/L)", ["<150", ">=150"])
-wbc = st.radio("白细胞计数 (个/mm³)", ["<15", "15-25", ">25"])
-hemoglobin = st.radio("血红蛋白 (g/dL)", [">13.5", "11.0-13.5", "<11"])
-sodium = st.radio("血钠 (mmol/L)", [">=135", "<135"])
-creatinine = st.radio("血肌酐 (μmol/L)", ["<=141", ">141"])
-glucose = st.radio("血糖 (mmol/L)", ["<=10", ">10"])
+crp = st.radio("CRP (mg/L)", ["<150", "大于等于150"])
+wbc = st.radio("白细胞计数 (个/mm³)", ["<15", "15-25", "大于25"])
+hemoglobin = st.radio("血红蛋白 (g/dL)", ["大于13.5", "11.0-13.5", "<11"])
+sodium = st.radio("血钠 (mmol/L)", ["大于等于135", "<135"])
+creatinine = st.radio("血肌酐 (μmol/L)", ["<=141", "大于141"])
+glucose = st.radio("血糖 (mmol/L)", ["<=10", "大于10"])
 
 # 动态评分说明
 st.write("评分说明：")
