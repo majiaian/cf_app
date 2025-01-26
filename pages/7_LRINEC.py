@@ -44,13 +44,13 @@ st.write("请选择以下实验室指标的范围以计算 LRINEC 评分：")
 # 选择框
 col1, col2 = st.columns(2)
 with col1:
-    crp = st.radio("CRP (mg/L)", ["<150", ">=150"], index=0)
-    wbc = st.radio("白细胞计数 (个/mm³)", ["<15", "15-25", ">25"], index=0)
+    crp = st.radio("CRP (mg/L)", ["<150", ">=150"])
+    wbc = st.radio("白细胞计数 (个/mm³)", ["<15", "15-25", ">25"])
     sodium = st.radio("血钠 (mmol/L)", [">=135", "<135"], index=0)
 with col2:
-    hemoglobin = st.radio("血红蛋白 (g/dL)", [">13.5", "11.0-13.5", "<11"], index=0)
-    creatinine = st.radio("血肌酐 (μmol/L)", ["<=141", ">141"], index=0)
-    glucose = st.radio("血糖 (mmol/L)", ["<=10", "10-15", ">15"], index=0)
+    hemoglobin = st.radio("血红蛋白 (g/dL)", [">13.5", "11.0-13.5", "<11"])
+    creatinine = st.radio("血肌酐 (μmol/L)", ["<=141", ">141"])
+    glucose = st.radio("血糖 (mmol/L)", ["<=10", "10-15", ">15"])
 
 # 动态评分说明
 st.write("评分说明：")
