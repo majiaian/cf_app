@@ -44,12 +44,12 @@ st.title("坏死性筋膜炎 LRINEC 评分")
 st.write("请选择以下实验室指标的范围以计算 LRINEC 评分：")
 
 # 选择框
-crp = st.radio("CRP (mg/L)", ["<150", "大于等于150"])
-wbc = st.radio("白细胞计数 (个/mm³)", ["<15", "15-25", "大于25"])
-hemoglobin = st.radio("血红蛋白 (g/dL)", ["大于13.5", "11.0-13.5", "<11"])
-sodium = st.radio("血钠 (mmol/L)", ["大于等于135", "<135"])
-creatinine = st.radio("血肌酐 (μmol/L)", ["<=141", "大于141"])
-glucose = st.radio("血糖 (mmol/L)", ["<=10", "大于10"])
+crp = st.radio("CRP (mg/L)", ["小于150", "大于等于150"])
+wbc = st.radio("白细胞计数 (个/mm³)", ["小于15", "15-25", "大于25"])
+hemoglobin = st.radio("血红蛋白 (g/dL)", ["大于13.5", "11.0-13.5", "小于11"])
+sodium = st.radio("血钠 (mmol/L)", ["大于等于135", "小于135"])
+creatinine = st.radio("血肌酐 (μmol/L)", ["小于等于141", "大于141"])
+glucose = st.radio("血糖 (mmol/L)", ["小于等于10", "大于10"])
 
 # 动态评分说明
 st.write("评分说明：")
