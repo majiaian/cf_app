@@ -10,9 +10,10 @@ page3 = st.Page("pages/3_Albumin.py", title="人血白蛋白")
 page4 = st.Page("pages/5_QTc.py",title="QTc计算")
 page5 = st.Page("pages/6_CURB65.py", title="CURB65肺炎评分")
 page6 = st.Page("pages/4_OPTCAD.py", title="OPTCAD心肌缺血评分")
+page7 = st.Page("pages/7_LRINEC.py", title="LRINEC坏死性筋膜炎评分")
 pages = {
     "辅助决策": [page1,page2,page3],
-    "公式工具": [page4,page5,page6],
+    "公式工具": [page4,page5,page6,page7],
 }
 
 
