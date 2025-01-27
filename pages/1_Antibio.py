@@ -18,7 +18,8 @@ def display_prevention_advice():
 # 定义抗菌药物使用的初始治疗逻辑
 def display_initial_treatment_advice():
     st.subheader("初始治疗经验用药")
-    st.write("上呼吸道感染多为病毒引起\n军团菌、鹦鹉热等非典型病原体检测手段不足，关注聚集发病、旅行史、鸟禽接触史等线索")
+    st.write("上呼吸道感染多为病毒引起\n军团菌、鹦鹉热等非典型病原体检测手段不足，关注聚集发病、旅行史、鸟禽接触史等线索。")
+    st.write("用药前可完善CURB65评分，高危患者可早期广覆盖")
     st.write("肾功能不全剂量调整参考https://mp.weixin.qq.com/s/5kipswjJ4fU5cK0ob2LfDw")
     infection_site = st.selectbox("选择感染部位", ["肺部感染", "泌尿系感染", "感染性休克"])
     if infection_site == "肺部感染":
